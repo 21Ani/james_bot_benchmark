@@ -1,0 +1,173 @@
+{
+  "name": "Enterprise Knowledge Base QA Dataset",
+  "description": "Simulated enterprise product knowledge documents with 18 practical support questions. Mirrors the PageIndex approach of pairing real-world domain documents with practitioner questions.",
+  "documents": {
+    "cloudsync_pro": "cloudsync_pro_kb.txt",
+    "datapipe_ops": "datapipe_ops_manual.txt",
+    "securevault_iam": "securevault_iam_policy.txt"
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "document_id": "cloudsync_pro",
+      "category": "warranty",
+      "difficulty": "easy",
+      "source_section": "WARRANTY POLICY",
+      "question": "What is the software warranty period for CloudSync Pro Enterprise?",
+      "expected_answer": "24-month software warranty"
+    },
+    {
+      "id": "Q002",
+      "document_id": "cloudsync_pro",
+      "category": "sla",
+      "difficulty": "medium",
+      "source_section": "SLA AND UPTIME",
+      "question": "What uptime does the Platinum SLA guarantee?",
+      "expected_answer": "99.95% monthly uptime"
+    },
+    {
+      "id": "Q003",
+      "document_id": "cloudsync_pro",
+      "category": "refund",
+      "difficulty": "medium",
+      "source_section": "REFUND AND CANCELLATION",
+      "question": "Within how many days can annual CloudSync subscriptions be refunded?",
+      "expected_answer": "45 days of purchase"
+    },
+    {
+      "id": "Q004",
+      "document_id": "cloudsync_pro",
+      "category": "password",
+      "difficulty": "easy",
+      "source_section": "PASSWORD AND ACCESS RECOVERY",
+      "question": "Where can administrators reset user passwords in CloudSync?",
+      "expected_answer": "Admin Console > Security > Identity"
+    },
+    {
+      "id": "Q005",
+      "document_id": "cloudsync_pro",
+      "category": "pricing",
+      "difficulty": "easy",
+      "source_section": "PRICING",
+      "question": "What is the monthly price per user for the Business plan?",
+      "expected_answer": "$29/user/month"
+    },
+    {
+      "id": "Q006",
+      "document_id": "cloudsync_pro",
+      "category": "support",
+      "difficulty": "hard",
+      "source_section": "SUPPORT ESCALATION",
+      "question": "Which support tier handles API errors for CloudSync?",
+      "expected_answer": "Tier-2 support handles integration failures and API errors"
+    },
+    {
+      "id": "Q007",
+      "document_id": "datapipe_ops",
+      "category": "retention",
+      "difficulty": "medium",
+      "source_section": "DATA RETENTION",
+      "question": "How long does DataPipe retain raw event data by default?",
+      "expected_answer": "13 months"
+    },
+    {
+      "id": "Q008",
+      "document_id": "datapipe_ops",
+      "category": "api",
+      "difficulty": "medium",
+      "source_section": "API RATE LIMITS",
+      "question": "What is the Enterprise tier API rate limit per minute?",
+      "expected_answer": "10,000 requests per minute"
+    },
+    {
+      "id": "Q009",
+      "document_id": "datapipe_ops",
+      "category": "disaster_recovery",
+      "difficulty": "hard",
+      "source_section": "BACKUP AND DISASTER RECOVERY",
+      "question": "What is the Recovery Time Objective (RTO) for DataPipe?",
+      "expected_answer": "4 hours"
+    },
+    {
+      "id": "Q010",
+      "document_id": "datapipe_ops",
+      "category": "onboarding",
+      "difficulty": "easy",
+      "source_section": "ONBOARDING TIMELINE",
+      "question": "How many business days does standard DataPipe onboarding take?",
+      "expected_answer": "10 business days"
+    },
+    {
+      "id": "Q011",
+      "document_id": "datapipe_ops",
+      "category": "compliance",
+      "difficulty": "medium",
+      "source_section": "SECURITY COMPLIANCE",
+      "question": "Which compliance certifications does DataPipe hold?",
+      "expected_answer": "SOC 2 Type II and ISO 27001 certified"
+    },
+    {
+      "id": "Q012",
+      "document_id": "datapipe_ops",
+      "category": "billing",
+      "difficulty": "medium",
+      "source_section": "BILLING DISPUTES",
+      "question": "Within how many days must DataPipe billing disputes be filed?",
+      "expected_answer": "20 days of invoice date"
+    },
+    {
+      "id": "Q013",
+      "document_id": "securevault_iam",
+      "category": "password",
+      "difficulty": "easy",
+      "source_section": "PASSWORD POLICY",
+      "question": "What is the minimum password length in SecureVault IAM?",
+      "expected_answer": "14 characters"
+    },
+    {
+      "id": "Q014",
+      "document_id": "securevault_iam",
+      "category": "security",
+      "difficulty": "medium",
+      "source_section": "ACCOUNT LOCKOUT",
+      "question": "After how many failed login attempts does SecureVault lock an account?",
+      "expected_answer": "5 failed login attempts within 15 minutes"
+    },
+    {
+      "id": "Q015",
+      "document_id": "securevault_iam",
+      "category": "compliance",
+      "difficulty": "hard",
+      "source_section": "COMPLIANCE FRAMEWORKS",
+      "question": "How long are SecureVault audit logs retained?",
+      "expected_answer": "5 years"
+    },
+    {
+      "id": "Q016",
+      "document_id": "securevault_iam",
+      "category": "incident",
+      "difficulty": "hard",
+      "source_section": "INCIDENT RESPONSE",
+      "question": "How quickly must the CISO be notified for a Severity-1 incident?",
+      "expected_answer": "within 30 minutes"
+    },
+    {
+      "id": "Q017",
+      "document_id": "securevault_iam",
+      "category": "licensing",
+      "difficulty": "medium",
+      "source_section": "LICENSING",
+      "question": "How many emergency break-glass accounts are allowed per environment?",
+      "expected_answer": "2 per environment"
+    },
+    {
+      "id": "Q018",
+      "document_id": "securevault_iam",
+      "category": "integration",
+      "difficulty": "hard",
+      "source_section": "VENDOR INTEGRATION",
+      "question": "When does legacy LDAP sync support end for SecureVault customers?",
+      "expected_answer": "EOS date: 2027-06-30"
+    }
+  ]
+}

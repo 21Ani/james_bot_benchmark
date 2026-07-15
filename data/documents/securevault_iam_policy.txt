@@ -1,0 +1,42 @@
+PRODUCT: SecureVault IAM
+VERSION: 6.1
+DOCUMENT TYPE: Security and Compliance Policy
+
+OVERVIEW
+SecureVault IAM provides identity governance, privileged access management, and audit trails
+for regulated industries including healthcare and financial services.
+
+PASSWORD POLICY
+Minimum length is 14 characters with at least one uppercase, lowercase, number, and symbol.
+Password rotation is required every 90 days for privileged accounts.
+Password history prevents reuse of the last 12 passwords.
+
+ACCOUNT LOCKOUT
+Accounts lock after 5 failed login attempts within 15 minutes.
+Locked privileged accounts require Security Operations approval for manual unlock.
+Service accounts are exempt from lockout but require certificate-based authentication.
+
+COMPLIANCE FRAMEWORKS
+SecureVault supports HIPAA, PCI-DSS 4.0, and GDPR control mappings out of the box.
+Audit logs are immutable and retained for 5 years.
+Quarterly access reviews are mandatory for all admin roles.
+
+INCIDENT RESPONSE
+Severity-1 incidents (active breach) require notification to the CISO within 30 minutes.
+Customer notification for data exposure follows regulatory timelines (72 hours for GDPR).
+Post-incident reports are delivered within 10 business days.
+
+LICENSING
+Per-user licensing applies to workforce identities.
+Privileged access seats are licensed separately at 3x standard user cost.
+Emergency break-glass accounts are limited to 2 per environment.
+
+VENDOR INTEGRATION
+SAML 2.0 and OIDC are supported for IdP federation.
+Legacy LDAP sync is available only for customers on extended support (EOS date: 2027-06-30).
+API keys for automation expire after 180 days unless rotated.
+
+SUPPORT HOURS
+Standard support: Monday-Friday 09:00-18:00 customer local time.
+Premium support: 24x7 for Severity-1 and Severity-2 incidents.
+Onsite support is available for Enterprise customers with NDA in place.

@@ -1,0 +1,37 @@
+PRODUCT: DataPipe Analytics Suite
+VERSION: 2.8
+DOCUMENT TYPE: Internal Operations Manual
+
+OVERVIEW
+DataPipe Analytics Suite ingests batch and streaming data for enterprise BI dashboards.
+It integrates with Snowflake, BigQuery, and on-premise SQL Server instances.
+
+DATA RETENTION
+Raw event data is retained for 13 months by default.
+Aggregated metrics are retained for 7 years for compliance reporting.
+Customers may request early deletion under GDPR Article 17 with legal approval.
+
+API RATE LIMITS
+Standard tier: 1,000 requests per minute per API key.
+Enterprise tier: 10,000 requests per minute with burst allowance of 15,000 for 60 seconds.
+Exceeding limits returns HTTP 429 with Retry-After header.
+
+BACKUP AND DISASTER RECOVERY
+Full backups run daily at 01:30 UTC; incremental backups every 6 hours.
+Recovery Point Objective (RPO) is 6 hours; Recovery Time Objective (RTO) is 4 hours.
+Cross-region failover is enabled only for Enterprise Plus contracts.
+
+ONBOARDING TIMELINE
+Standard onboarding completes in 10 business days.
+Enterprise onboarding with custom connectors requires 25 business days.
+Pilot customers receive a dedicated solutions engineer for the first 30 days.
+
+SECURITY COMPLIANCE
+DataPipe is SOC 2 Type II and ISO 27001 certified.
+PII fields must be tagged using the `pii:true` schema annotation.
+Penetration test reports are shared with Enterprise customers annually.
+
+BILLING DISPUTES
+Billing disputes must be filed within 20 days of invoice date.
+Credits for service outages exceeding SLA thresholds are applied automatically within one billing cycle.
+Manual credits require VP Finance approval for amounts above $25,000.

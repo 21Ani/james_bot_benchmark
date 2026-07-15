@@ -1,0 +1,882 @@
+{
+  "benchmark": {
+    "name": "James Bot Enterprise Knowledge Base QA Benchmark",
+    "version": "1.0.0",
+    "goal": "Evaluate James Bot's accuracy on enterprise knowledge-base question answering compared to household AI (ChatGPT without document grounding). James Bot uses TalkingDB for structured document indexing \u2014 this benchmark tests whether that provides a measurable advantage on multi-document, domain-specific QA tasks that customer-support teams routinely face.",
+    "dataset": "Enterprise Knowledge Base QA Dataset",
+    "run_timestamp": "2026-07-14T05:52:07.548183+00:00"
+  },
+  "aggregated_metrics": {
+    "james_bot": {
+      "system_name": "James Bot (TalkingDB)",
+      "total_questions": 18,
+      "accuracy_strict_pct": 94.44,
+      "accuracy_fuzzy_pct": 61.11,
+      "avg_fuzzy_score": 81.21,
+      "avg_grounding_score": 100.0,
+      "avg_response_time_ms": 350.06,
+      "by_category": {
+        "warranty": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "sla": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "refund": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "password": {
+          "accuracy_fuzzy_pct": 50.0,
+          "avg_grounding_score": 100.0
+        },
+        "pricing": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "support": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "retention": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "api": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "disaster_recovery": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "onboarding": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 100.0
+        },
+        "compliance": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 100.0
+        },
+        "billing": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "security": {
+          "accuracy_fuzzy_pct": 100.0,
+          "avg_grounding_score": 100.0
+        },
+        "incident": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 100.0
+        },
+        "licensing": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 100.0
+        },
+        "integration": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 100.0
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "accuracy_fuzzy_pct": 60.0,
+          "avg_grounding_score": 100.0
+        },
+        "medium": {
+          "accuracy_fuzzy_pct": 75.0,
+          "avg_grounding_score": 100.0
+        },
+        "hard": {
+          "accuracy_fuzzy_pct": 40.0,
+          "avg_grounding_score": 100.0
+        }
+      }
+    },
+    "chatgpt": {
+      "system_name": "ChatGPT (Household AI)",
+      "total_questions": 18,
+      "accuracy_strict_pct": 0.0,
+      "accuracy_fuzzy_pct": 0.0,
+      "avg_fuzzy_score": 27.37,
+      "avg_grounding_score": 40.91,
+      "avg_response_time_ms": 800.0,
+      "by_category": {
+        "warranty": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 38.46
+        },
+        "sla": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 75.0
+        },
+        "refund": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 61.54
+        },
+        "password": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 62.5
+        },
+        "pricing": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 45.45
+        },
+        "support": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 45.45
+        },
+        "retention": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 27.27
+        },
+        "api": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 27.27
+        },
+        "disaster_recovery": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 27.27
+        },
+        "onboarding": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 27.27
+        },
+        "compliance": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 31.82
+        },
+        "billing": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 27.27
+        },
+        "security": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 36.36
+        },
+        "incident": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 36.36
+        },
+        "licensing": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 36.36
+        },
+        "integration": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 36.36
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 47.24
+        },
+        "medium": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 39.79
+        },
+        "hard": {
+          "accuracy_fuzzy_pct": 0.0,
+          "avg_grounding_score": 36.36
+        }
+      }
+    }
+  },
+  "comparison": {
+    "james_bot_accuracy_fuzzy_pct": 61.11,
+    "competitor_accuracy_fuzzy_pct": 0.0,
+    "accuracy_delta_pct": 61.11,
+    "james_bot_grounding_score": 100.0,
+    "competitor_grounding_score": 40.91
+  },
+  "detailed_results": [
+    {
+      "question_id": "Q001",
+      "system_id": "james_bot",
+      "question": "What is the software warranty period for CloudSync Pro Enterprise?",
+      "expected_answer": "24-month software warranty",
+      "response": "CloudSync Pro Enterprise includes a 36-month hardware warranty and a 24-month software warranty. PRODUCT: CloudSync Pro Enterprise CloudSync Pro Enterprise is a secure file synchronization platform for distributed teams.",
+      "response_time_ms": 350.07360000745393,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "warranty",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q002",
+      "system_id": "james_bot",
+      "question": "What uptime does the Platinum SLA guarantee?",
+      "expected_answer": "99.95% monthly uptime",
+      "response": "The Platinum SLA guarantees 99.95% monthly uptime. Extended warranty (48 months) is available only for Platinum-tier customers. SLA AND UPTIME",
+      "response_time_ms": 350.05740000051446,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "sla",
+      "difficulty": "medium",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q003",
+      "system_id": "james_bot",
+      "question": "Within how many days can annual CloudSync subscriptions be refunded?",
+      "expected_answer": "45 days of purchase",
+      "response": "Annual subscriptions are refundable within 45 days of purchase if fewer than 500 GB has been synced. Warranty claims must be submitted within 15 business days of incident discovery. Monthly subscriptions are non-refundable after 7 days.",
+      "response_time_ms": 350.06339998799376,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "refund",
+      "difficulty": "medium",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q004",
+      "system_id": "james_bot",
+      "question": "Where can administrators reset user passwords in CloudSync?",
+      "expected_answer": "Admin Console > Security > Identity",
+      "response": "Administrators can reset user passwords via the Admin Console > Security > Identity. Starter plan: $12/user/month (100 GB storage). Business plan: $29/user/month (1 TB storage, SSO included).",
+      "response_time_ms": 350.06049999501556,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 83.01886792452831,
+      "grounding_score": 100.0,
+      "category": "password",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q005",
+      "system_id": "james_bot",
+      "question": "What is the monthly price per user for the Business plan?",
+      "expected_answer": "$29/user/month",
+      "response": "Business plan: $29/user/month (1 TB storage, SSO included). Warranty claims must be submitted within 15 business days of incident discovery. The Platinum SLA guarantees 99.95% monthly uptime.",
+      "response_time_ms": 350.06130000110716,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "pricing",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q006",
+      "system_id": "james_bot",
+      "question": "Which support tier handles API errors for CloudSync?",
+      "expected_answer": "Tier-2 support handles integration failures and API errors",
+      "response": "Tier-2 support handles integration failures and API errors. Tier-1 support handles password resets and billing inquiries. MFA recovery codes are issued once during onboarding and can be regenerated by Tier-2 support only.",
+      "response_time_ms": 350.06109999958426,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 93.57798165137615,
+      "grounding_score": 100.0,
+      "category": "support",
+      "difficulty": "hard",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q007",
+      "system_id": "james_bot",
+      "question": "How long does DataPipe retain raw event data by default?",
+      "expected_answer": "13 months",
+      "response": "Raw event data is retained for 13 months by default. PRODUCT: DataPipe Analytics Suite DataPipe Analytics Suite ingests batch and streaming data for enterprise BI dashboards.",
+      "response_time_ms": 350.06419999408536,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "retention",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q008",
+      "system_id": "james_bot",
+      "question": "What is the Enterprise tier API rate limit per minute?",
+      "expected_answer": "10,000 requests per minute",
+      "response": "API RATE LIMITS Enterprise tier: 10,000 requests per minute with burst allowance of 15,000 for 60 seconds. DataPipe Analytics Suite ingests batch and streaming data for enterprise BI dashboards.",
+      "response_time_ms": 350.06270001176745,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "api",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q009",
+      "system_id": "james_bot",
+      "question": "What is the Recovery Time Objective (RTO) for DataPipe?",
+      "expected_answer": "4 hours",
+      "response": "Recovery Point Objective (RPO) is 6 hours; Recovery Time Objective (RTO) is 4 hours. BACKUP AND DISASTER RECOVERY ONBOARDING TIMELINE",
+      "response_time_ms": 350.0581000058446,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "disaster_recovery",
+      "difficulty": "hard",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q010",
+      "system_id": "james_bot",
+      "question": "How many business days does standard DataPipe onboarding take?",
+      "expected_answer": "10 business days",
+      "response": "Standard onboarding completes in 10 business days. Enterprise onboarding with custom connectors requires 25 business days. PRODUCT: DataPipe Analytics Suite",
+      "response_time_ms": 350.0673999893479,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 81.48148148148148,
+      "grounding_score": 100.0,
+      "category": "onboarding",
+      "difficulty": "easy",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q011",
+      "system_id": "james_bot",
+      "question": "Which compliance certifications does DataPipe hold?",
+      "expected_answer": "SOC 2 Type II and ISO 27001 certified",
+      "response": "PRODUCT: DataPipe Analytics Suite DataPipe Analytics Suite ingests batch and streaming data for enterprise BI dashboards. Aggregated metrics are retained for 7 years for compliance reporting.",
+      "response_time_ms": 350.05860000965185,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 27.835051546391753,
+      "grounding_score": 100.0,
+      "category": "compliance",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q012",
+      "system_id": "james_bot",
+      "question": "Within how many days must DataPipe billing disputes be filed?",
+      "expected_answer": "20 days of invoice date",
+      "response": "Billing disputes must be filed within 20 days of invoice date. BILLING DISPUTES Credits for service outages exceeding SLA thresholds are applied automatically within one billing cycle.",
+      "response_time_ms": 350.06629998097196,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 87.8048780487805,
+      "grounding_score": 100.0,
+      "category": "billing",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q013",
+      "system_id": "james_bot",
+      "question": "What is the minimum password length in SecureVault IAM?",
+      "expected_answer": "14 characters",
+      "response": "Minimum length is 14 characters with at least one uppercase, lowercase, number, and symbol. PRODUCT: SecureVault IAM SecureVault IAM provides identity governance, privileged access management, and audit trails",
+      "response_time_ms": 350.06520000169985,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 100.0,
+      "grounding_score": 100.0,
+      "category": "password",
+      "difficulty": "easy",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q014",
+      "system_id": "james_bot",
+      "question": "After how many failed login attempts does SecureVault lock an account?",
+      "expected_answer": "5 failed login attempts within 15 minutes",
+      "response": "Accounts lock after 5 failed login attempts within 15 minutes. PRODUCT: SecureVault IAM SecureVault IAM provides identity governance, privileged access management, and audit trails",
+      "response_time_ms": 350.07759997970425,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": true,
+      "fuzzy_score": 89.1891891891892,
+      "grounding_score": 100.0,
+      "category": "security",
+      "difficulty": "medium",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q015",
+      "system_id": "james_bot",
+      "question": "How long are SecureVault audit logs retained?",
+      "expected_answer": "5 years",
+      "response": "SecureVault IAM provides identity governance, privileged access management, and audit trails Audit logs are immutable and retained for 5 years. PRODUCT: SecureVault IAM",
+      "response_time_ms": 350.0616000033915,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 25.0,
+      "grounding_score": 100.0,
+      "category": "compliance",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q016",
+      "system_id": "james_bot",
+      "question": "How quickly must the CISO be notified for a Severity-1 incident?",
+      "expected_answer": "within 30 minutes",
+      "response": "Severity-1 incidents (active breach) require notification to the CISO within 30 minutes. Premium support: 24x7 for Severity-1 and Severity-2 incidents.",
+      "response_time_ms": 350.0640999933239,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 69.23076923076923,
+      "grounding_score": 100.0,
+      "category": "incident",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q017",
+      "system_id": "james_bot",
+      "question": "How many emergency break-glass accounts are allowed per environment?",
+      "expected_answer": "2 per environment",
+      "response": "Emergency break-glass accounts are limited to 2 per environment. Password rotation is required every 90 days for privileged accounts. Accounts lock after 5 failed login attempts within 15 minutes.",
+      "response_time_ms": 350.0644999963697,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 45.45454545454545,
+      "grounding_score": 100.0,
+      "category": "licensing",
+      "difficulty": "medium",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q018",
+      "system_id": "james_bot",
+      "question": "When does legacy LDAP sync support end for SecureVault customers?",
+      "expected_answer": "EOS date: 2027-06-30",
+      "response": "Legacy LDAP sync is available only for customers on extended support (EOS date: 2027-06-30). SecureVault supports HIPAA, PCI-DSS 4.0, and GDPR control mappings out of the box. PRODUCT: SecureVault IAM",
+      "response_time_ms": 350.0746000150684,
+      "accuracy_strict": true,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 59.25925925925926,
+      "grounding_score": 100.0,
+      "category": "integration",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set JAMES_BOT_API_URL for live runs"
+      }
+    },
+    {
+      "question_id": "Q001",
+      "system_id": "chatgpt",
+      "question": "What is the software warranty period for CloudSync Pro Enterprise?",
+      "expected_answer": "24-month software warranty",
+      "response": "Most enterprise products include a standard 1-year warranty, though terms vary by vendor.",
+      "response_time_ms": 800.0028000213206,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 47.05882352941177,
+      "grounding_score": 38.46153846153847,
+      "category": "warranty",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q002",
+      "system_id": "chatgpt",
+      "question": "What uptime does the Platinum SLA guarantee?",
+      "expected_answer": "99.95% monthly uptime",
+      "response": "Typical enterprise SLAs guarantee 99.9% uptime with support response within 24 hours.",
+      "response_time_ms": 800.0019000144675,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 44.44444444444444,
+      "grounding_score": 75.0,
+      "category": "sla",
+      "difficulty": "medium",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q003",
+      "system_id": "chatgpt",
+      "question": "Within how many days can annual CloudSync subscriptions be refunded?",
+      "expected_answer": "45 days of purchase",
+      "response": "Refund policies generally allow returns within 30 days if the product is unused.",
+      "response_time_ms": 800.0021000159904,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 34.78260869565217,
+      "grounding_score": 61.53846153846154,
+      "category": "refund",
+      "difficulty": "medium",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q004",
+      "system_id": "chatgpt",
+      "question": "Where can administrators reset user passwords in CloudSync?",
+      "expected_answer": "Admin Console > Security > Identity",
+      "response": "Password reset is usually available through the account portal or support team.",
+      "response_time_ms": 800.0019999861252,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 30.909090909090907,
+      "grounding_score": 66.66666666666666,
+      "category": "password",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q005",
+      "system_id": "chatgpt",
+      "question": "What is the monthly price per user for the Business plan?",
+      "expected_answer": "$29/user/month",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.002000015229,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 17.28395061728395,
+      "grounding_score": 45.45454545454545,
+      "category": "pricing",
+      "difficulty": "easy",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q006",
+      "system_id": "chatgpt",
+      "question": "Which support tier handles API errors for CloudSync?",
+      "expected_answer": "Tier-2 support handles integration failures and API errors",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0018999853637,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 40.625,
+      "grounding_score": 45.45454545454545,
+      "category": "support",
+      "difficulty": "hard",
+      "document_id": "cloudsync_pro",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q007",
+      "system_id": "chatgpt",
+      "question": "How long does DataPipe retain raw event data by default?",
+      "expected_answer": "13 months",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0019999861252,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 15.189873417721515,
+      "grounding_score": 27.27272727272727,
+      "category": "retention",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q008",
+      "system_id": "chatgpt",
+      "question": "What is the Enterprise tier API rate limit per minute?",
+      "expected_answer": "10,000 requests per minute",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0019000144675,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 27.368421052631575,
+      "grounding_score": 27.27272727272727,
+      "category": "api",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q009",
+      "system_id": "chatgpt",
+      "question": "What is the Recovery Time Objective (RTO) for DataPipe?",
+      "expected_answer": "4 hours",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.002000015229,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 12.987012987012989,
+      "grounding_score": 27.27272727272727,
+      "category": "disaster_recovery",
+      "difficulty": "hard",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q010",
+      "system_id": "chatgpt",
+      "question": "How many business days does standard DataPipe onboarding take?",
+      "expected_answer": "10 business days",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0021000159904,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 23.25581395348837,
+      "grounding_score": 27.27272727272727,
+      "category": "onboarding",
+      "difficulty": "easy",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q011",
+      "system_id": "chatgpt",
+      "question": "Which compliance certifications does DataPipe hold?",
+      "expected_answer": "SOC 2 Type II and ISO 27001 certified",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.002000015229,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 33.64485981308411,
+      "grounding_score": 27.27272727272727,
+      "category": "compliance",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q012",
+      "system_id": "chatgpt",
+      "question": "Within how many days must DataPipe billing disputes be filed?",
+      "expected_answer": "20 days of invoice date",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0019999861252,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 30.107526881720432,
+      "grounding_score": 27.27272727272727,
+      "category": "billing",
+      "difficulty": "medium",
+      "document_id": "datapipe_ops",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q013",
+      "system_id": "chatgpt",
+      "question": "What is the minimum password length in SecureVault IAM?",
+      "expected_answer": "14 characters",
+      "response": "Password reset is usually available through the account portal or support team.",
+      "response_time_ms": 800.0018999853637,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 17.391304347826093,
+      "grounding_score": 58.333333333333336,
+      "category": "password",
+      "difficulty": "easy",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q014",
+      "system_id": "chatgpt",
+      "question": "After how many failed login attempts does SecureVault lock an account?",
+      "expected_answer": "5 failed login attempts within 15 minutes",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0020999868866,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 36.03603603603604,
+      "grounding_score": 36.36363636363637,
+      "category": "security",
+      "difficulty": "medium",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q015",
+      "system_id": "chatgpt",
+      "question": "How long are SecureVault audit logs retained?",
+      "expected_answer": "5 years",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0018999853637,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 12.987012987012989,
+      "grounding_score": 36.36363636363637,
+      "category": "compliance",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q016",
+      "system_id": "chatgpt",
+      "question": "How quickly must the CISO be notified for a Severity-1 incident?",
+      "expected_answer": "within 30 minutes",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.002000015229,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 25.287356321839084,
+      "grounding_score": 36.36363636363637,
+      "category": "incident",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q017",
+      "system_id": "chatgpt",
+      "question": "How many emergency break-glass accounts are allowed per environment?",
+      "expected_answer": "2 per environment",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0020999868866,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 25.287356321839084,
+      "grounding_score": 36.36363636363637,
+      "category": "licensing",
+      "difficulty": "medium",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    },
+    {
+      "question_id": "Q018",
+      "system_id": "chatgpt",
+      "question": "When does legacy LDAP sync support end for SecureVault customers?",
+      "expected_answer": "EOS date: 2027-06-30",
+      "response": "I don't have access to your company's internal knowledge base documents.",
+      "response_time_ms": 800.0020999868866,
+      "accuracy_strict": false,
+      "accuracy_fuzzy": false,
+      "fuzzy_score": 17.97752808988764,
+      "grounding_score": 36.36363636363637,
+      "category": "integration",
+      "difficulty": "hard",
+      "document_id": "securevault_iam",
+      "metadata": {
+        "mode": "mock",
+        "note": "Set OPENAI_API_KEY for live runs"
+      }
+    }
+  ]
+}

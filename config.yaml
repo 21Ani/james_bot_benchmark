@@ -1,0 +1,49 @@
+benchmark:
+  name: "James Bot Enterprise Knowledge Base QA Benchmark"
+  version: "1.0.0"
+  goal: >
+    Evaluate James Bot's accuracy on enterprise knowledge-base question answering
+    compared to household AI (ChatGPT without document grounding). James Bot uses
+    TalkingDB for structured document indexing — this benchmark tests whether that
+    provides a measurable advantage on multi-document, domain-specific QA tasks
+    that customer-support teams routinely face.
+
+  competitor: "chatgpt"
+  systems:
+    - id: james_bot
+      name: "James Bot (TalkingDB)"
+      adapter: james_bot
+    - id: chatgpt
+      name: "ChatGPT (Household AI)"
+      adapter: chatgpt
+
+dataset:
+  path: "data/benchmark_dataset.json"
+  documents_dir: "data/documents"
+
+evaluation:
+  metrics:
+    - accuracy_strict
+    - accuracy_fuzzy
+    - response_time_ms
+    - grounding_score
+  fuzzy_threshold: 85
+  grounding_threshold: 70
+
+output:
+  results_dir: "results"
+  report_format: ["json", "markdown"]
+
+adapters:
+  james_bot:
+    # Replace with your James Bot / TalkingDB endpoint
+    base_url: "${JAMES_BOT_API_URL}"
+    api_key: "${JAMES_BOT_API_KEY}"
+    timeout_seconds: 120
+  chatgpt:
+    model: "gpt-4o-mini"
+    api_key: "${OPENAI_API_KEY}"
+    timeout_seconds: 60
+    # When true, ChatGPT receives full document context (upper-bound baseline)
+    # When false, ChatGPT answers from parametric knowledge only (household AI)
+    include_document_context: false
