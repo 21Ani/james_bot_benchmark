@@ -16,7 +16,7 @@ from src.runner import BenchmarkRunner
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Run James Bot benchmarking study (QE Assignment)"
+        description="Run James Bot benchmarking study"
     )
     parser.add_argument(
         "--config",
